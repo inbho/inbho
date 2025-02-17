@@ -4,30 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inbho</title>
-    <link rel="icon" type="image/png" href="/src/components/images/icon-inbho.png">
-    <link rel="stylesheet" href="/src/styles/navigation.css">
+    <link rel="icon" type="image/png" href="src/components/images/icon-inbho.png">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo">CompanyLogo</a>
-        
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#product">Product</a>
-                <a href="#community">Community</a>
-                <a href="#connect">Connect</a>
-                <div class="cta-buttons">
-                    <a href="#signin" class="signin">Sign In</a>
-                    <a href="#signup" class="signup">Sign Up</a>
-                </div>
-            </div>
-    
-            <button class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </header>
-    <script src="/src/styles/navigation.js"></script>
+    <!-- Include Tailwind CSS in your project -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<nav class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Logo and Desktop Menu -->
+      <div class="flex">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0 flex items-center">
+          <img class="h-8 w-auto" src="src/components/images/final-honi.png" alt="Your Logo">
+        </a>
+        <!-- Desktop Navigation Links -->
+        <div class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
+          <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-600 hover:text-gray-800 hover:border-gray-300">
+            Product
+          </a>
+          <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-600 hover:text-gray-800 hover:border-gray-300">
+            Pricing
+          </a>
+          <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-600 hover:text-gray-800 hover:border-gray-300">
+            Docs
+          </a>
+          <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-600 hover:text-gray-800 hover:border-gray-300">
+            Blog
+          </a>
+        </div>
+      </div>
+      <!-- Desktop Action Buttons -->
+      <div class="hidden sm:ml-6 sm:flex sm:items-center">
+        <a href="#" class="text-gray-600 hover:text-gray-800 text-sm font-medium mr-4">
+            Sign In
+          </a>
+        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700">
+          Get Started
+        </a>
+      </div>
+      <!-- Mobile menu button -->
+      <div class="-mr-2 flex items-center sm:hidden">
+        <button type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+          <span class="sr-only">Open main menu</span>
+          <!-- Menu open icon (hamburger) -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Navigation Menu (hidden by default) -->
+  <div class="sm:hidden" id="mobile-menu" style="display: none;">
+    <div class="pt-2 pb-3 space-y-1">
+      <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-blue-500 bg-blue-50 text-blue-700 text-base font-medium">
+        Product
+      </a>
+      <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-base font-medium">
+        Pricing
+      </a>
+      <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-base font-medium">
+        Docs
+      </a>
+      <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-base font-medium">
+        Blog
+      </a>
+      <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-base font-medium">
+        Sign In
+      </a>
+      <a href="#" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 text-base font-medium">
+        Get Started
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script src="src/components/script.js"></script>
 </body>
 </html>
